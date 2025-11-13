@@ -1,14 +1,3 @@
-@ECHO OFF
-IF "%FXC%" == "" SET "FXC=C:\Program Files (x86)\Windows Kits\10\bin\x64\fxc.exe"
-IF NOT EXIST "%FXC%" (
-	ECHO Couldn't find Windows 10 SDK, falling back to DXSDK...
-	SET "FXC=%DXSDK_DIR%\Utilities\bin\x86\fxc.exe"
-	IF NOT EXIST "%FXC%" (
-		ECHO Couldn't find DXSDK! Exiting...
-		GOTO END
-	)
-)
-"%FXC%" BasePassPixelShader.usf /E MainPS /Zpr /Gec /O3 /T ps_5_0 /Ni /FcBasePassPixelShader.d3dasm 
- pause
-:END
-REM
+version https://git-lfs.github.com/spec/v1
+oid sha256:be0b0569b2d18b28690ee06401de308469b994ec8ad73f6b5bcfd973f5c5d7ab
+size 422
